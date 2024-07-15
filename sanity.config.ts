@@ -1,32 +1,34 @@
+import { visionTool } from "@sanity/vision";
 import { defineConfig } from "sanity";
+import { muxInput } from "sanity-plugin-mux-input";
 import { presentationTool } from "sanity/presentation";
 import { structureTool } from "sanity/structure";
 
-import { visionTool } from "@sanity/vision";
 import {
     SANITY_API_VERSION,
     SANITY_DATASET,
     SANITY_PROJECT_ID,
 } from "@/lib/sanity";
-import { recipeSchema } from "@/lib/sanity/types/Recipe";
-import { configSchema } from "@/lib/sanity/types/Config";
-import { heroSchema } from "@/lib/sanity/types/modules/Hero";
-import { imageSliceSchema } from "@/lib/sanity/types/modules/ImageSlice";
-import { reusableModuleSchema } from "@/lib/sanity/types/modules/ReusableModule";
-import { showcaseSchema } from "@/lib/sanity/types/modules/Showcase";
-import { textBlockSchema } from "@/lib/sanity/types/modules/TextBlock";
-import { twoColumnSchema } from "@/lib/sanity/types/modules/TwoColumn";
-import { buttonSchema } from "@/lib/sanity/types/objects/Button";
-import { contentSchema } from "@/lib/sanity/types/objects/Content";
-import { footerLinkSchema } from "@/lib/sanity/types/objects/FooterLink";
-import { imageButtonSchema } from "@/lib/sanity/types/objects/ImageButton";
-import { richTextSchema } from "@/lib/sanity/types/objects/RichText";
+import "@/lib/sanity/style.css";
 import {
-    sanityImageSchema,
+    buttonSchema,
+    configSchema,
+    contentSchema,
+    footerLinkSchema,
+    heroSchema,
+    imageButtonSchema,
+    imageSliceSchema,
+    pageSchema,
+    recipeSchema,
+    reusableModuleSchema,
+    richTextSchema,
     sanityImageCropSchema,
-} from "@/lib/sanity/types/objects/SanityImage";
-import { socialLinkSchema } from "@/lib/sanity/types/objects/SocialLink";
-import { pageSchema } from "@/lib/sanity/types/Page";
+    sanityImageSchema,
+    showcaseSchema,
+    socialLinkSchema,
+    textBlockSchema,
+    twoColumnSchema,
+} from "@/lib/sanity/types";
 
 export default defineConfig({
     basePath: "/studio",
@@ -67,5 +69,6 @@ export default defineConfig({
                 },
             },
         }),
+        muxInput(),
     ],
 });

@@ -46,10 +46,5 @@ export const recipeSchema = defineType({
             title: "Thumbnail",
             type: "image",
         },
-        {
-            name: "product",
-            title: "Product",
-            type: "shopifyProduct",
-        },
     ],
 });

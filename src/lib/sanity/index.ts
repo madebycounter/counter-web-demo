@@ -1,6 +1,5 @@
-import { draftMode } from "next/headers";
-
 import { createClient } from "next-sanity";
+import { draftMode } from "next/headers";
 
 export const SANITY_API_VERSION =
     process.env.NEXT_PUBLIC_SANITY_API_VERSION ||
@@ -12,18 +11,12 @@ export const SANITY_PROJECT_ID =
 export const SANITY_DATASET =
     process.env.NEXT_PUBLIC_SANITY_DATASET || process.env.SANITY_STUDIO_DATASET;
 
-console.log(SANITY_API_VERSION, SANITY_PROJECT_ID, SANITY_DATASET);
-
 export const client = createClient({
     apiVersion: SANITY_API_VERSION,
     projectId: SANITY_PROJECT_ID,
     dataset: SANITY_DATASET,
     useCdn: false,
     perspective: "published",
-    stega: {
-        enabled: false,
-        studioUrl: "/studio",
-    },
 });
 
 export async function query<T>(

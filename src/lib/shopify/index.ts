@@ -1,13 +1,7 @@
-import {
-    HIDDEN_PRODUCT_TAG,
-    SHOPIFY_GRAPHQL_API_ENDPOINT,
-    TAGS,
-} from "./utils/constants";
-import { isShopifyError } from "./utils/type-guards";
-import { ensureStartsWith } from "./utils/utils";
 import { revalidateTag } from "next/cache";
 import { headers } from "next/headers";
 import { NextRequest, NextResponse } from "next/server";
+
 import {
     addToCartMutation,
     createCartMutation,
@@ -53,6 +47,13 @@ import {
     ShopifyRemoveFromCartOperation,
     ShopifyUpdateCartOperation,
 } from "./types";
+import {
+    HIDDEN_PRODUCT_TAG,
+    SHOPIFY_GRAPHQL_API_ENDPOINT,
+    TAGS,
+} from "./utils/constants";
+import { isShopifyError } from "./utils/type-guards";
+import { ensureStartsWith } from "./utils/utils";
 
 const domain = process.env.SHOPIFY_STORE_DOMAIN
     ? ensureStartsWith(process.env.SHOPIFY_STORE_DOMAIN, "https://")
