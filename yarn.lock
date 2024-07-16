@@ -1628,6 +1628,14 @@
     "@mux/playback-core" "0.25.0"
     media-chrome "~3.2.3"
 
+"@mux/mux-video-react@^0.11.1":
+  version "0.11.1"
+  resolved "https://registry.yarnpkg.com/@mux/mux-video-react/-/mux-video-react-0.11.1.tgz#67a5a2b41e5a0c82bd26308dfe92e34f009e3902"
+  integrity sha512-Nsg6ySzH/53a4Ai5b4gf5X0peBtLrg+e9uHhdnI9MJ1m4oc9KDQQ6emFdIHlHqaAYZVu0iiP9y2+PUEVzDmCBw==
+  dependencies:
+    "@mux/playback-core" "0.25.0"
+    prop-types "^15.7.2"
+
 "@mux/mux-video@0.20.0":
   version "0.20.0"
   resolved "https://registry.yarnpkg.com/@mux/mux-video/-/mux-video-0.20.0.tgz#54d5b85749556525bf7ca8568973489ab9e97efe"
@@ -2949,6 +2957,11 @@ clone@^1.0.2:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/clone/-/clone-1.0.4.tgz#da309cc263df15994c688ca902179ca3c7cd7c7e"
   integrity sha512-JQHZ2QMW6l3aH/j6xCqQThY/9OH4D/9ls34cgkUBiEeocRTU04tHfKPBsUK1PqZCUQM7GiA0IIXJSuXHI64Kbg==
+
+clsx@^2.1.1:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/clsx/-/clsx-2.1.1.tgz#eed397c9fd8bd882bfb18deab7102049a2f32999"
+  integrity sha512-eYm0QWBtUrBWZWG0d386OGAw16Z995PiOVo2B7bjWSbHedGl5e0ZWaq65kOGgUSNesEIDkB9ISbTg/JK9dhCZA==
 
 codemirror@^6.0.0:
   version "6.0.1"
@@ -5782,6 +5795,11 @@ sanity-diff-patch@^3.0.2:
   integrity sha512-Vsx6IPuMepvfaX2/jOFuUrJaloHvSmXavS9SL3iJhhIPAu20VfumCtdH5kpKlXKL1pBgCAZhWHXfLC4Fyg7qFg==
   dependencies:
     "@sanity/diff-match-patch" "^3.0.0"
+
+sanity-image@^0.1.9:
+  version "0.1.9"
+  resolved "https://registry.yarnpkg.com/sanity-image/-/sanity-image-0.1.9.tgz#a0e0112bfb8e93d549d7b58fd39cb01ece488913"
+  integrity sha512-/C40bvVyQP4ZI6dG66s2cCok90IaGzMzaPbikzzD2IXVWJIBSnu7RLyAmB4QPuSYDbEVIOpEKtrnl30ELlUBAA==
 
 sanity-plugin-mux-input@^2.3.6:
   version "2.3.6"

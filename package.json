@@ -10,13 +10,17 @@
         "deploy:sanity": "sanity deploy"
     },
     "dependencies": {
+        "@mux/mux-video-react": "^0.11.1",
         "@sanity/vision": "^3.50.0",
+        "clsx": "^2.1.1",
+        "lodash": "^4.17.21",
         "next": "14.2.5",
         "next-sanity": "^9.4.2",
         "react": "^18",
         "react-dom": "^18",
         "react-icons": "^5.2.1",
         "sanity": "^3.50.0",
+        "sanity-image": "^0.1.9",
         "sanity-plugin-mux-input": "^2.3.6",
         "styled-components": "^6.1"
     },

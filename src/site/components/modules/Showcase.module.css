@@ -1,0 +1,26 @@
+.Row {
+    display: grid;
+    grid-template-columns: 1fr 600px;
+}
+
+.Row__reversed {
+    display: grid;
+    grid-template-columns: 600px 1fr;
+    transform: translateY(-40%);
+}
+
+@media (max-width: 1000px) {
+    .Row {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .Row__reversed {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 1350px) {
+    .Row__reversed {
+        transform: translateY(0);
+    }
+}

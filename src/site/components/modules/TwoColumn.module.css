@@ -1,0 +1,16 @@
+.TwoColumn {
+    display: grid;
+    --sidebar-width: 400px;
+}
+
+.TwoColumn__even {
+    grid-template-columns: 1fr 1fr;
+}
+
+.TwoColumn__left {
+    grid-template-columns: var(--sidebar-width) 1fr;
+}
+
+.TwoColumn__right {
+    grid-template-columns: 1fr var(--sidebar-width);
+}

@@ -1,5 +1,14 @@
+import imageUrlBuilder from "@sanity/image-url";
 import { createClient } from "next-sanity";
 import { draftMode } from "next/headers";
+
+import {
+    SanityImage,
+    Config,
+    configFragment,
+    Page,
+    pageFragment,
+} from "@/lib/sanity/types";
 
 export const SANITY_API_VERSION =
     process.env.NEXT_PUBLIC_SANITY_API_VERSION ||
@@ -18,6 +27,12 @@ export const client = createClient({
     useCdn: false,
     perspective: "published",
 });
+
+export const imageBuilder = imageUrlBuilder(client);
+
+export function urlFor(source: SanityImage) {
+    return imageBuilder.image(source.id);
+}
 
 export async function query<T>(
     query: string,
@@ -39,4 +54,29 @@ export async function query<T>(
             tags,
         },
     });
+}
+
+export async function usePage(slug: string): Promise<Page> {
+    console.log(pageFragment);
+
+    return query(
+        `
+        *[_type == "page" && slug.current == $slug][0] {
+            ${pageFragment}
+        }
+    `,
+        { slug },
+        ["page", "reusableModule"],
+    );
+}
+
+export async function useConfig(): Promise<Config> {
+    return query(
+        `
+        *[_type == "config"][0] {
+            ${configFragment}
+        }`,
+        {},
+        ["config"],
+    );
 }
