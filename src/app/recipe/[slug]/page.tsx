@@ -3,6 +3,7 @@ import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { FaCartShopping, FaUser } from "react-icons/fa6";
 import { IoIosSearch } from "react-icons/io";
+import { LuPrinter } from "react-icons/lu";
 
 import Action from "@/lib/components/Action";
 import Image from "@/lib/components/Image";
@@ -149,6 +150,14 @@ export default async function Page({ params }: { params: { slug: string } }) {
                         </div>
 
                         <div className="flex gap-2">
+                            <div className="flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-emerald-800 px-3 py-1 font-bold text-white">
+                                <Action
+                                    href={`/recipe/${recipe.slug.current}/print`}
+                                    label="Print Recipe"
+                                >
+                                    <LuPrinter />
+                                </Action>
+                            </div>
                             {recipe.dietary.map((diet, index) => (
                                 <div
                                     key={index}
@@ -163,7 +172,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
                                             : diet === "Low Sugar"
                                               ? "ls"
                                               : diet}
-                                    <span className="absolute top-full hidden translate-y-2 rounded-lg bg-slate-500 px-2 py-1 font-light group-hover:inline-block">
+                                    <span className="absolute top-full hidden translate-y-2 whitespace-nowrap rounded-lg bg-slate-500 px-2 py-1 font-light group-hover:inline-block">
                                         {diet}
                                     </span>
                                 </div>
