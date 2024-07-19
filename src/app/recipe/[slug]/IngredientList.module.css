@@ -1,0 +1,20 @@
+.Strike {
+    position: relative;
+    width: fit-content;
+
+    background-image: linear-gradient(grey, grey);
+    background-size: 0% 1px;
+    background-repeat: no-repeat;
+    background-position: left 50%;
+
+    transition:
+        background-size 0.3s,
+        color 0.3s;
+
+    user-select: none;
+}
+
+.Strike__active {
+    background-size: 100% 1px;
+    color: grey;
+}

@@ -1,6 +1,8 @@
 import { UlistIcon, SplitHorizontalIcon, EarthGlobeIcon } from "@sanity/icons";
 import { defineType } from "sanity";
 
+import { Recipe } from "@/lib/sanity/types/Recipe";
+
 import { Page } from "./Page";
 import { FooterLink, footerLinkFragment } from "./objects/FooterLink";
 import { SanityImage, sanityImageFragment } from "./objects/SanityImage";
@@ -94,6 +96,10 @@ export const configFragment = `
         title,
         slug,
     },
+    "latestRecipes": *[_type == "recipe"] | order(_createdAt desc) [0...3] {
+        title,
+        slug
+    }
 `;
 
 export interface Config {
@@ -105,4 +111,5 @@ export interface Config {
     socialLinks: SocialLink[];
     footerLinks: FooterLink[];
     navLinks: Page[];
+    latestRecipes: Recipe[];
 }

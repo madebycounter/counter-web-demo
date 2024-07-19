@@ -1,0 +1,9 @@
+.NavGrid {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+}
+
+.ContentGrid {
+    display: grid;
+    grid-template-columns: 700px auto;
+}

@@ -8,6 +8,8 @@ import {
     configFragment,
     Page,
     pageFragment,
+    Recipe,
+    recipeFragment,
 } from "@/lib/sanity/types";
 
 export const SANITY_API_VERSION =
@@ -78,5 +80,16 @@ export async function useConfig(): Promise<Config> {
         }`,
         {},
         ["config"],
+    );
+}
+
+export async function useRecipe(slug: string): Promise<Recipe> {
+    return query(
+        `
+        *[_type == "recipe" && slug.current == $slug][0] {
+            ${recipeFragment}
+        }`,
+        { slug },
+        ["recipe"],
     );
 }
