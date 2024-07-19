@@ -17,6 +17,13 @@ const config: Config = {
                 "Lucida Grande",
                 "sans-serif",
             ],
+            serif: [
+                "Georgia",
+                "Cambria",
+                '"Times New Roman"',
+                "Times",
+                "serif",
+            ],
         },
         extend: {
             backgroundImage: {
