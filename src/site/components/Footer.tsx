@@ -217,6 +217,9 @@ export default function Footer({
 
                         <p className="text-center text-sm">
                             Site for demonstation purposes only.
+                            <br />
+                            Not designed for mobile use. Information may not be
+                            accurate.
                         </p>
 
                         {/* <p className="text-center text-sm">
