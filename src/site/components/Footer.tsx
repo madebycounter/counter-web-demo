@@ -216,9 +216,13 @@ export default function Footer({
                         </div>
 
                         <p className="text-center text-sm">
+                            Site for demonstation purposes only.
+                        </p>
+
+                        {/* <p className="text-center text-sm">
                             &copy; {new Date().getFullYear()}{" "}
                             {siteConfig.companyName}. All rights reserved.
-                        </p>
+                        </p> */}
                     </div>
                 </div>
             </div>
