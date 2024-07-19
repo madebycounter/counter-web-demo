@@ -30,15 +30,19 @@ export default async function Page({ params }: { params: { slug: string } }) {
                     {recipe.title}
                 </h1>
                 <div className="my-2 w-fit text-sm">
-                    <p className="inline-block border-y-2 border-r-2 border-gray-400 px-3 py-1">
+                    <p className="inline-block border-y-2 border-gray-400 px-3 py-1">
                         Serves{" "}
                         {recipe.servings.min && recipe.servings.max
                             ? `${recipe.servings.min} to ${recipe.servings.max}`
                             : recipe.servings.min || recipe.servings.max}
                     </p>
 
-                    <p className="my-2 inline-block w-fit border-y-2 border-gray-400 px-3 py-1">
+                    <p className="my-2 inline-block w-fit border-2 border-gray-400 px-3 py-1">
                         Time <span>{recipe.prepTime}</span>
+                    </p>
+
+                    <p className="my-2 inline-block w-fit border-y-2 border-gray-400 px-3 py-1">
+                        {recipe.dietary.join(", ")}{" "}
                     </p>
                 </div>
 
