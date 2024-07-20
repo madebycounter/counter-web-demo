@@ -1,0 +1,29 @@
+.NavGrid {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+}
+
+.ContentGrid {
+    display: grid;
+    grid-template-columns: 700px auto;
+}
+
+.Arrow {
+    position: relative;
+    margin-right: 2em;
+}
+
+.Arrow:after {
+    --size: 0.7em;
+    background-image: url("data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCA1LjkgOS41Jz48ZyBkYXRhLW5hbWU9J0xheWVyIDInPjxwYXRoIGQ9J20wIDguNCAzLjYtMy42TDAgMS4xIDEuMSAwbDQuOCA0LjgtNC44IDQuN1onIGZpbGw9J2N1cnJlbnRDb2xvcicgZGF0YS1uYW1lPSdMYXllciAxJy8+PC9nPjwvc3ZnPg==");
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: " ";
+    display: inline-block;
+    height: var(--size);
+    width: var(--size);
+    position: absolute;
+    left: calc(100% + 0.8em);
+    top: 0.2em;
+    opacity: 0.5;
+}
